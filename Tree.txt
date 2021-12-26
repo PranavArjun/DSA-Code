@@ -1,0 +1,39 @@
+---------------------------Tree-----------------------------
+	class node{
+    		int data;
+   	  	node left , right;
+
+    		public node (int data){
+        	this.data=data;
+    	}
+
+	---------Tree Creation-------
+
+    static node createtree(){
+        Scanner sc = new Scanner(System.in);
+        node root = null;
+        int data = sc.nextInt();
+        if (data ==-1){
+            return null;
+        }
+        root = new node(data);
+        System.out.println("enter the value of left node " + root.data);
+        root.left = createtree();
+
+        System.out.println("enter the value of right node " + root.data);
+        root.right= createtree();
+
+        return root;
+    }
+
+	----------Print Tree---------
+
+    static void printtree(node root){
+        if (root==null){
+            return;
+        }
+        System.out.println(root.data);
+        printtree(root.left);
+        printtree(root.right);
+
+    }

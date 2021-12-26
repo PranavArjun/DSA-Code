@@ -1,0 +1,59 @@
+  	------------ Linked List ----------
+
+//    static class Node{
+//        int data;
+//        Node next;
+//        Node(){}
+//        Node(int t) { this.data=t;next=null;  }
+//        Node(int t ,Node next){this.data=t;this.next=next;}
+//    }
+  
+	------Print Linked List------
+
+//    static void printlinkedlist(Node head){
+//        Node temp = head;
+//        while (temp!=null){
+//            System.out.println(temp.data);
+//            temp=temp.next;
+//        }
+//    }
+
+	------Merge Two Sorted LinkedList without extra space-----
+
+//    static Node twosortlinkedlist(Node l1,Node l2){
+//        if (l1==null)return l2;
+//        if (l2==null)return l1;
+//        if (l1.data>l2.data){
+//            Node temp1 = l1;
+//            l1=l2;
+//            l2=temp1;
+//        }
+//        Node res=l1;
+//        while (l1!=null && l2!=null){
+//            Node temp=null;
+//            while (l1!=null && l1.data<=l2.data){
+//                temp=l1;
+//                l1=l1.next;
+//            }
+//            temp.next=l2;
+//            Node temp1 = l1;
+//            l1=l2;
+//            l2=temp1;
+//        }
+//        return res;
+//    }
+
+	------MergeSort for LL------
+
+//    static Node megresort(Node head , Node tail){
+//       if (head==tail){
+//           Node br = new Node(head.data);
+//           return br;
+//       }
+//
+//       Node mid =  midele(head,tail);
+//       Node left =megresort(head,mid);
+//       Node right = megresort(mid.next,tail);
+//       Node result = twosortlinkedlist(left,right);
+//       return result;
+//    }

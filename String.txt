@@ -1,0 +1,12 @@
+ 	------- Swap Char from string -------
+
+//    public static String swap(String s, int i, int j)
+//    {
+//        char temp;
+//        char[] charArray = s.toCharArray();
+//        temp = charArray[i] ;
+//        charArray[i] = charArray[j];
+//        charArray[j] = temp;
+//
+//        return new String(charArray);
+//    }
